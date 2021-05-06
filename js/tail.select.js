@@ -986,7 +986,10 @@
             }
             
             /* Reset input field */
-            this.dropdown.querySelector('input').value = '';
+            if(typeof this.dropdown.querySelector('input') !== 'undefined'
+            && this.dropdown.querySelector('input') != null){
+                this.dropdown.querySelector('input').value = '';
+            }
             this.query.call(this, '');
         },
 
